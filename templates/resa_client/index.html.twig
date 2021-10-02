@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('asset/css/detailsresa.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+    <script src="{{ asset('asset/js/detailResa.js') }}"></script>
+{% endblock %}
+
+
+{% block title %}Réservation{% endblock %}
+
+{% block body %}
+<h1>Détails de votre réservation</h1>
+<div class="trait"></div>
+ 
+
+      <form>
+            <input id="impression" name="impression" type="button" onclick="imprimer_page()" value="Enregistrer mon détail" />
+        </form>
+
+        <h2>{{ app.user.nom}} {{app.user.prenom}}</h2><br><br>
+
+
+
+        <div class="message">
+        {% for messages in app.flashes %}
+            {% for msg in messages %}
+                <div>{{ msg|raw }}</div>
+               <p>Vous pouvez imprimer ou sauvegarder ce message de réservation en cliquant sur le bouton "Enregistrer mon détail".</p>
+            {% endfor %}
+        {% endfor %}
+        </div>
+
+        <div class="detailresa">
+            <ul><br><br>
+                <li> Date d'arrivée :          {{ reservation.dateArrivee|date('d/m/y') }}</li><br>
+                <li> Date du départ :          {{ reservation.dateDepart|date('d/m/y') }}</li><br>
+                <li> Nombre de personne(s) :   {{ reservation.nombrePersonnes }}</li><br>
+                <li> Type de chambre :         {{ reservation.chambre.typeChambre}}</li><br>
+                <li> Nombre d'animal/animaux : {{ reservation.nombreAnimaux }}</li><br>
+                <li> Type d'animal/animaux :   {{ reservation.typeAnimaux }}</li><br>
+             </ul>
+        </div>   
+
+        <div class="message">
+        <p> Nous informons notre aimable clientèle, que toute annulation se fera via le formulaire de contact ou par téléphone.</p>
+        
+        </div>
+        
+            <h2>Récapitulatif des tarifs</h2>
+            <div class="trait"></div>
+         <section id="Recaptarif">
+               <div class="infostarifs">
+                    <h3>Petit déjeuner<br><br></h3>
+                    <i class="fas fa-mug-hot" id="icone"></i><br>
+                    <li> inclus dans le tarif des chambres</li><br>
+                </div>
+
+                <div class="infostarifs">
+                    <h3>Tarifs animaux<br><br></h3>
+                    <i class="fas fa-cat" id="icone"></i>
+                    <i class="fas fa-dog" id="icone"></i><br>
+                    <li> Par Animal 5 euros par jour en plus du prix de la chambre</li>
+                    <li> Se renseigner à l'accueil pour le tarif du pet sitter</li><br>
+                </div>
+
+                <div class="infostarifs">
+                    <h3>Tarifs de nos chambres<br><br></h3>
+                    <i class="fas fa-bed" id="icone"></i><br>
+                   <li> Chambre simple 50 euros la nuit</li>
+                    <li> Chambre double 100 euros la nuit</li>
+                    <li> Chambre triple 150 euros la nuit</li>
+                </div>
+                <div class="infostarifs">
+                    <h3>Tarifs soins<br><br></h3>
+                    <i class="fas fa-hot-tub" id="icone"></i><br>
+                    <li> Massages : 30€ la scéance de 45 min</li>
+                    <li> Hammam et sauna : 20€ les 30 min</li>
+                    <li> Piscine incluse dans le tarif des chambres</li>
+                </div>
+                </section>
+            <img src="{{ asset('asset/img/logocarte.jpg')}}" alt="logo paiement" id="carte">
+
+
+
+{% endblock %}
+

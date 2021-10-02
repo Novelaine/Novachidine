@@ -1,0 +1,234 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Novachidine Hôtel{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('asset/css/accueil.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {#{{ encore_entry_script_tags('app') }}#}
+    {{ parent() }}
+    <script src="{{ asset('asset/js/accueil.js') }}"></script>
+
+
+{% endblock %}
+
+
+{% block body %}
+ <main>
+
+           
+            <img src="{{ asset('asset/imgjs/1.jpg')}}" alt="chambre hotel"  id="banniere">
+            <div class="infoCovid">
+            <h3>Information Covid-19</h3>
+        <p>Conformément aux règlementations gouvernementales françaises pour la lutte contre la Covid-19 toute personne <strong>doit obligatoirement être munie d’un pass sanitaire</strong>.<br> Ce pass sanitaire consiste en la présentation numérique via l’application TousAntiCovid ou papier d’une preuve sanitaire.<br>
+                Les preuves acceptées sont :<br>
+
+                <strong>Un certificat de vaccination</strong>, à conditions de disposer d’un schéma vaccinal complet<br>
+
+                ou<br>
+
+                <strong>Un test négatif RT-PCR ou antigénique</strong> de moins de 72 heures<br>
+
+                ou<br>
+
+                <strong>Un certificat de rétablissement</strong> de la Covid-19 : test RT-PCR ou antigénique positif datant d’au moins 11 jours et moins de 6 mois.
+
+                </p>
+                </div>
+        <section id="introduction">
+           <h2> BIENVENUE </h2>
+           <img src="{{ asset('asset/img/separation1.png')}}" alt="image de separation" id="separation">
+           <div class="cadre1">
+           <aside>
+               <img src="{{ asset('asset/img/chien1.jpg')}}" alt="image de chien"><br>
+           <strong>Le plus de notre hôtel :</strong><br><br>
+
+            VENEZ DE DEUX A QUATRE PATTES<br><br>
+
+            Nos portes sont ouvertes à nos amis les animaux, des chambres sont spécialement conçues pour vous et votre animal de compagnie.
+
+            Dans le respect de chacun, les chambres étant entrées en contact avec un animal, ne sont EN AUCUN CAS attribuées à une personne sans animaux, pour ainsi limiter tous risques d'allergies.
+            </aside>
+            
+            <p>Notre hôtel Le Novachidine et toute son équipe, ont le plaisir de vous accueillir <strong>24h/24 7j/7</strong>.</p><br>
+
+            <p>Notre restaurant quant à lui est ouvert de <strong>9h à 22h30</strong>.</p><br>
+
+            <p>Pour plus de renseignements, nous vous invitons à nous laisser un message sur la page contact, via notre formulaire.</p><br>
+
+            <p>Notre établissement est adapté aux personnes à mobilité réduite <i class="fab fa-accessible-icon"></i> <i class="fas fa-blind"></i></p>
+            </div>
+        </section>
+
+        <div class="cadre">
+        <section>
+        <h2> Les Services </h2>
+        <img src="{{ asset('asset/img/separation1.png')}}" alt="image de separation" id="separation">
+       
+        <section id="services">
+           <div class="cadre2">
+           <img src="{{ asset('asset/img/tourisme1.jpg')}}" alt="">
+           
+           <h3>Rendez-vous à l'accueil de notre hôtel pour les informations touristiques !</h3>
+            <span>Voir plus...</span>
+            </div> 
+             <div class="cadre3">
+           <img src="{{ asset('asset/img/tourisme1.jpg')}}" alt="image de paris">
+           <img src="{{ asset('asset/imgjs/close1.png')}}" class="close" alt="croix de fermeture">
+           <h3>Rendez-vous à l'accueil de notre hôtel pour les informations touristiques !</h3>
+                <p>Vous pourrez visiter les plus beaux lieux touristiques et choisir parmi de très nombreuses activités culturelles ou de loisirs.<br>
+                 Pour vous aider, notre équipe vous conseillera sur les lieux à visiter afin d'optimiser votre séjour.<br> 
+                 Nous pouvons également nous charger de contacter pour vous les différents prestataires et même réserver des départs</p>
+            </div>  
+            <div class="cadre2">
+           <img src="{{ asset('asset/img/restaurant.jpg')}}" alt="image de restaurant">
+           
+           <h3>Notre Restaurant & bar "Le Nova" - 9h00 à 22h30 7j/7.</h3>
+                <span>Voir plus...</span>
+            </div>
+             <div class="cadre3">
+           <img src="{{ asset('asset/img/restaurant.jpg')}}" alt="image de restaurant">
+           <img src="{{ asset('asset/imgjs/close1.png')}}" class="close" alt="croix de fermeture">
+           
+           <h3>Notre Restaurant & bar "Le Nova" - 9h00 à 22h30 7j/7.</h3>
+           <p>Notre restaurant "Le Nova" est heureux de vous ouvrir ses portes de 9h00 à 22h30 7j/7.<br>
+            Au Nova la gourmandise se décline en mode gastronomique ou bistronomique, offrant un répertoire culinaire riche et varié, du brunch, au dîner en passant par un service en chambre à toute heure.<br>
+            Nos cartes et menus sont susceptibles de varier selon les jours et les produits disponibles.</p>
+            </div>
+            <div class="cadre2">
+           <img src="{{ asset('asset/img/ok33.jpg')}}" alt="image petit déjeuner">
+           
+           <h3>Service petit-déjeuner </h3>
+                <span>Voir plus...</span>
+            </div>
+             <div class="cadre3">
+            <img src="{{ asset('asset/img/ok33.jpg')}}" alt="image petit déjeuner">
+            <img src="{{ asset('asset/imgjs/close1.png')}}" class="close" alt="croix de fermeture">
+           
+           <h3>Service petit-déjeuner </h3>
+                <p>C’est un large choix de produits locaux, de produits bio, de jus de fruits frais et de cakes faits maison, proposés de 7h à 10h la semaine et de 7h à 11h le week-end.<br> 
+                Le petit déjeuner est proposé sous forme de buffet sucré salé. Des boissons chaudes et jus de fruits sont à votre disposition : café, thé, chocolat, cappuccino, café latte macchiato, jus d'orange, jus de pomme, jus d'ananas...<br> 
+                Nous servons également des plateaux de fromage et charcuteries, oeufs brouillés (faits maison) lard, tomates, œufs à la coque, un large choix de confitures, salades de fruits maison, plateaux de fruits, gâteau ou cakes maison, viennoiseries, pains, céréales.</p>
+            </div>
+
+            <div class="cadre2">
+           <img src="{{ asset('asset/img/33.jpg')}}" alt="Femme avec son chien">
+           
+           <h3>"Venez de deux à quatre pattes" Nos amis les animaux sont les bienvenus</h3>
+                <span>Voir plus...</span>
+                
+            </div>
+             <div class="cadre3">
+           <img src="{{ asset('asset/img/33.jpg')}}" alt="femme avec son chien">
+           <img src="{{ asset('asset/imgjs/close1.png')}}" class="close" alt="croix de fermeture">
+           
+           <h3>"Venez de deux à quatre pattes" Nos amis les animaux sont les bienvenus !</h3>
+                <p>Le Novachidine vous propose un complexe dédié à vos animaux préférés. Un environnement où règnent bien-être, sérénité, service sur mesure et respect de l’animal. Les soins sont adaptés à leurs besoins, 3 000 m2 de terrain dédiés à vos compagnons préférés. Alimentation, friandises, accessoires, jouets… adaptés à votre animal. Grâce à notre partenariat avec les vétérinaires de Paris le moindre soin pourra leur être apporté rapidement.<br>
+                Nous mettons à votre disposition également, des pet sitter qualifiés, qui vous permettront de savoir votre animal en sécurité lors de vos déplacements.</p>
+            </div>
+        
+
+        </div>
+        
+        </section>
+        </section>
+        <div class="cadre">
+           <h2>Les Activités</h2>
+           <img src="{{ asset('asset/img/separation1.png')}}" alt="image de separation" id="separation">
+           <section id="services">
+        
+        <div class="cadre2">
+           <img src="{{ asset('asset/img/spa.png')}}" alt="image spa">
+           <h3>Venez vous relaxer dans notre espace détente !</h3>
+                <p class="relax">Aménagements détente :</p>
+                    <ul>
+                        <li> 3 cabines de soin, dont 1 cabine de soin double</li>
+                        <li> Massages de pierres chaudes</li>
+                        <li> Massages Californiens</li>
+                        <li>Hammam</li>
+                        <li>Sauna</li><br>
+                    </ul>
+                    <div class="horairessoins">
+                    <strong><p>Soins beauté & massages <br>Le dimanche et lundi de 9h à 18h <br> Le mardi et mercredi de 9h à 19h<br>
+                    Le jeudi, le vendredi et le samedi de 9h à 20h</p></strong>
+                    </div>
+        </div>
+            <div class="cadre2">
+           <img src="{{ asset('asset/img/piscine2.png')}}" alt="image piscine">
+            <h3>Notre piscine en accès libre !</h3>
+                <p class="relax">Le Novachidine vous propose :</p>
+                    <ul>
+                        <li>Piscine intérieure 9 x 6 m</li>
+                        <li>Chauffée entre 26 et 29°</li>
+                        <li>Espace détente autour de la piscine avec transats et fauteuils</li>
+                        <li>Piscine de relaxation avec bain à remous</li>
+                        <li>Accès libre à la clientèle de l'hôtel de 7 h à 23 h</li>
+                    </ul>
+            </div>
+           </div>
+        </section>
+
+
+        <div class="cadre">
+           <h2>Tarifs</h2>
+           <img src="{{ asset('asset/img/separation1.png')}}" alt="image de separation" id="separation">
+           <section id="tarif">
+                <div class="infostarifs">
+                    <h3>Petit déjeuner<br><br></h3>
+                    <i class="fas fa-mug-hot" id="icone"></i><br>
+                    <li> inclus dans le tarif des chambres</li><br>
+                </div>
+
+                <div class="infostarifs">
+                    <h3>Tarifs animaux<br><br></h3>
+                    <i class="fas fa-cat" id="icone"></i>
+                    <i class="fas fa-dog" id="icone"></i><br>
+                    <li> Par Animal 5 euros par jour en plus du prix de la chambre</li>
+                    <li> Se renseigner à l'accueil pour le tarif du pet sitter</li><br>
+                </div>
+
+                <div class="infostarifs">
+                    <h3>Tarifs de nos chambres<br><br></h3>
+                    <i class="fas fa-bed" id="icone"></i><br>
+                   <li> Chambre simple 50 euros la nuit</li>
+                    <li> Chambre double 100 euros la nuit</li>
+                    <li> Chambre triple 150 euros la nuit</li>
+                </div>
+                <div class="infostarifs">
+                    <h3>Tarifs soins<br><br></h3>
+                    <i class="fas fa-hot-tub" id="icone"></i><br>
+                    <li> Massages : 30€ la scéance de 45 min</li>
+                    <li> Hammam et sauna : 20€ les 30 min</li>
+                    <li> Piscine incluse dans le tarif des chambres</li>
+                </div>
+                </section>
+            <img src="{{ asset('asset/img/logocarte.jpg')}}" alt="logo paiement" id="carte">
+
+            </div>
+
+           
+
+        
+
+        
+            <section class="partenaire">
+                <h3>Nos partenaires</h3>
+                <img src="{{ asset('asset/img/office.png')}}" alt="office de tourisme">
+                <img src="{{ asset('asset/img/villeparis.jpg')}}" alt="ville de paris">
+                <img src="{{ asset('asset/img/veterinaire.jpg')}}" alt="veterinaire">
+            </section>
+
+</main>
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Contact{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('asset/css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Contactez-nous</h1>
+<div class="trait"></div>
+
+<h4>Pour toute information supplémentaire, contactez-nous :</h4>
+
+    {{ include('contact/_form.html.twig') }}
+
+<h4>Vous pouvez également nous contacter par téléphone au 01.30.31.32.33<br>
+    du lundi au dimanche de 8h à 20h</h4>
+   
+{% endblock %}

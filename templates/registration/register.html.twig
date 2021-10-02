@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <h1>Inscription</h1>
+    <div class="trait"></div>
+
+    {{ form_start(registrationForm) }}
+<section class="resa">
+    <div>
+        {{ form_row(registrationForm.nom) }}
+        {{ form_row(registrationForm.prenom) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.telephone) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+    </div>
+    <div>
+        {{ form_row(registrationForm.adresse) }}
+        {{ form_row(registrationForm.ville) }}
+        {{ form_row(registrationForm.code_postal) }}
+        {{ form_row(registrationForm.pays) }}        
+        {{ form_row(registrationForm.agreeTerms) }}
+    </div>
+</section>
+        <button type="submit" class="btn">Enregistrer</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}

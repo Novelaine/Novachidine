@@ -1,0 +1,205 @@
+header{
+    position: fixed;
+}
+#banniere {
+    width: 100%;
+    height: 950px;
+}
+.infoCovid{
+    width: 70%;
+    margin: 5% auto;
+    padding: 2%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.63);
+}
+.infoCovid h3{
+    color: rgb(128, 1, 1);
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+main h2{
+    text-align:center;
+    font-size: 33px;
+    margin: 7px 30px;
+}
+#separation{
+    width: 12%;
+    margin-left: 44%;
+}
+.cadre{
+    border: 1px solid rgb(95, 79, 68);
+    margin: 5%;
+    padding: 60px;
+}
+#introduction{
+    margin: 125px 130px 230px 130px;
+}
+#introduction h2{
+  font-size: 37px;
+}
+
+.cadre1{
+    width: 100%;
+    font-size: 20px;
+    padding: 25px 0px;
+}
+.cadre1 p{
+    width: 55%;
+    padding-top: 25px;
+    text-shadow: 4px 0px 8px #1c1a19;
+    text-align: center;
+
+}
+.cadre1 aside{
+    float: right;
+    width: 30%;
+    background-color: rgba(158, 157, 157, 0.452);
+    box-shadow: 0px 4px 6px #1c1a19;
+    padding: 15px;
+    margin-right: 134px;
+    border-radius: 5px;
+}
+aside img{
+    width: 50%;
+    margin-left: 25%;
+}
+.cadre2{
+    margin: 5px;
+    padding: 10px;
+}
+.cadre2 span{
+    box-shadow: 2px 1px 4px;
+    border: 1px solid #000;
+    padding: 2%;
+    margin-left:7%;
+    cursor: pointer;
+
+}
+.cadre2 img{
+    width: 73%;
+    margin: 15px auto 0px 15px;
+    padding: 5px 10px 35px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px #1c1a19;
+}
+.cadre2 p{
+    padding: 8px 47px 9px 25px;
+}
+.cadre2 h3:hover{
+    text-transform: uppercase;
+}
+.cadre2 h3{
+    padding: 8px 47px 9px 25px;
+    margin-bottom: 35px;
+}
+
+.cadre2 .relax{
+    font-size: 17px;
+}
+.cadre2 ul{
+    padding-left: 42px;
+}
+.horairessoins{
+    margin-left: 100px;
+}
+.cadre3{
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 32px 85px 35px;
+    position: absolute;
+    text-align: center;
+    font-size: 21px;
+    visibility: hidden;
+}
+.cadre3 p{
+    padding: 8px 236px;
+    background-color: #fff;
+}
+.cadre3 h3{
+    padding: 8px 47px 9px 25px;
+    background-color: #fff;
+}
+.cadre3 img{
+    width: 40%;
+}
+.cadre3 .close{
+    width: 4%;
+    float: right;
+}
+#services {
+    width: 100%;
+    display: flex;
+    padding: 20px 0px 82px 0px;
+    margin-left:25px;
+}
+
+.partenaire{
+    display: flex;
+    margin-left: 5%;
+}
+.partenaire img{
+    width: 9%;
+    padding: 5px;
+}
+#carte{
+    width: 12%;
+    margin-left: 71%;
+}
+#tarif{
+    display: flex;
+    justify-content: space-around;
+    margin: 6% 0;
+}
+
+.infostarifs{
+    box-shadow: 0px 4px 6px #1c1a19;
+    background-color: rgba(158, 157, 157, 0.452);
+    padding: 20px;
+    border-radius: 3px;
+}
+#icone{
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+@media screen and (max-width: 1120px){
+
+    #banniere{
+        height: 500px;
+    }
+    #introduction{
+        margin: 0px;
+    }
+    .cadre1 aside{
+        width: 83%;
+        float: none;
+        margin: auto;
+    }
+    #services{
+        display: block;
+        width: 100%;
+    }
+    .cadre1{
+        padding: 0px;
+    }
+    #tarif{
+        display: block;
+    }
+    #carte{
+        width: 29%;
+    }
+    .cadre1 p{
+        margin: auto;
+    }
+    .partenaire{
+        display: none;
+    }
+    footer .containerfooter{
+        display: block;
+    }
+    footer .containerfooter div{
+        padding: 15px;
+    }
+}
+

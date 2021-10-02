@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie index{% endblock %}
+
+{% block body %}
+    <h1>Liste de la Galerie</h1>
+    <div class="trait"></div>
+    <a href="{{ path('galerie_new') }}"><button>Créer</button></a>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for galerie in galeries %}
+            <tr>
+                <td>{{ galerie.id }}</td>
+                <td>{{ galerie.image }}</td>
+                <td>{{ galerie.description }}</td>
+                <td>
+                    <a href="{{ path('galerie_show', {'id': galerie.id}) }}"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('galerie_edit', {'id': galerie.id}) }}"><i class="fas fa-pencil-alt"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

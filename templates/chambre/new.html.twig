@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Chambre{% endblock %}
+
+{% block body %}
+    <h1>Créer une nouvelle Chambre</h1>
+    <div class="trait"></div>
+    <a href="{{ path('chambre_index') }}">Retour à la liste</a>
+
+    {{ include('chambre/_form.html.twig') }}
+
+{% endblock %}

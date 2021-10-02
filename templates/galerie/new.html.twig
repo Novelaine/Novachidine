@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Galerie{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une nouvelle photo</h1>
+    <div class"trait"></div>
+    
+    <a href="{{ path('galerie_index') }}">Retour à la liste</a>
+
+    {{ include('galerie/_form.html.twig') }}
+
+    
+
+{% endblock %}

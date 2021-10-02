@@ -1,0 +1,242 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color:  #f1e0cc;
+}
+
+
+/*------------------------------------------------- DEBUT DU HEADER-------------------------------------------------- */
+
+header h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-right: 100px;
+}
+
+h1{
+    padding: 40px 0 20px 0;
+}
+
+#slogan {
+    text-align: center;
+  
+    font-size: 25px;
+    padding: 0 100px 20px 0
+}
+header a{
+    color: #000000;
+    text-decoration: none;
+}
+
+header img {
+    border-radius: 50%;
+    width : 100px;
+    padding-left: 25px;
+    
+}
+.burger{
+    visibility: hidden;
+}
+.fermer{
+    visibility: hidden;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3%;  
+}
+nav li{
+    list-style-type: none;
+}
+nav a {
+    display: block;
+    margin-top: 5px;
+    padding: 20px;
+    text-decoration: none;
+    color :rgb(0, 0, 0);
+}
+
+nav a:hover {
+    color: #ffffff;
+	background-color: rgb(95, 79, 68);
+    text-transform: uppercase;
+	transition: 0.5s;
+    border-radius: 5px;
+}
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px rgb(22,21,21);
+    background-color: rgba(97,92,76,0.746);
+    position: absolute;
+    width: 11%;
+    padding: 10px;
+}
+nav ul li:hover .sous{
+    display :block;
+}
+.sous li{
+    width: 100%;
+}
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #f1e0ccc0;
+}
+header img {
+    display: flex;
+    float: left;
+}
+
+.admin:hover{
+    display: flex;
+    justify-content: flex-start;
+    background-color: crimson;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.trait{
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto;
+}
+
+.message{
+    color:rgb(14, 57, 223);
+    text-align: center;
+    padding: 15px;
+    margin-top: 17%;
+    font-weight: bold;
+}
+
+table{
+    border: 1px solid;
+    text-align: center;
+    margin: 80px auto;
+    font-size: 30px;
+}
+
+table td{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color: rgba(227, 235, 227, 0.924);
+
+}
+table th{
+    border: 2px solid black;
+    background-color: rgba(100, 148, 237, 0.637);
+}
+
+footer{
+    background-color: rgb(95, 79, 68);
+}
+footer h4{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+footer .adresse{
+    font-size: 20px;
+}
+footer .containerfooter div {
+    width: 50%;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+
+}
+footer .containerfooter {
+    width: 100%;
+    display: flex;
+}
+footer .divadresse{
+    margin-top: 35px;
+    padding-top: 20px;
+}
+
+footer .reseauxsociaux{
+    margin-top: 35px;
+}
+footer .reseauxsociaux .logo2{
+    padding: 10px;
+}
+.copyright{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+   
+}
+button{
+    width: 7%;
+    padding: 10px;
+    background-color: rgb(100, 149, 237);
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 190px;
+    box-shadow: 0px 2px 4px;
+    margin-top: 30px;
+
+}
+.btnDelete{
+    width: 7%;
+    padding: 10px;
+    background-color: rgb(196, 7, 7);
+    font-size: 15px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px;
+}
+
+#return{
+    padding: 20px;
+    font-size: 37px;
+}
+
+
+@media screen and (max-width: 1120px){
+
+    nav{
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 27%;
+        background-color: #ffffff98;
+    }
+    .burger{
+        visibility: visible;
+        float: right;
+        width: 13%;
+        border-radius: 0%;
+        margin-right: 5%;
+    }
+    nav ul li:hover .sous{
+        width: 29%;
+    }
+
+footer .containerfooter{
+    display: block;
+}
+footer .containerfooter div{
+    padding: 15px;
+}
+
+footer{
+    padding-left : 33%;
+}
+
+.copyright h5{
+    margin-right: 47%;
+}
+
+.deroulant{
+    display: none;
+}
+}

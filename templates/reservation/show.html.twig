@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block body %}
+    <h1>Voir la Réservation</h1>
+    <div class"trait"></div>
+        <a href="{{ path('reservation_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+
+
+    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}"><button class="btnModif">Modifier</button></a>
+
+    
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>Date d'arrivée</th>
+                <td>{{ reservation.dateArrivee ? reservation.dateArrivee|date('d/m/Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Date du départ</th>
+                <td>{{ reservation.dateDepart ? reservation.dateDepart|date('d/m/Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Nombre d'animaux</th>
+                <td>{{ reservation.nombreAnimaux }}</td>
+            </tr>
+            <tr>
+                <th>Type d'animaux</th>
+                <td>{{ reservation.typeAnimaux }}</td>
+            </tr>
+            <tr>
+                <th>Nombre de personnes</th>
+                <td>{{ reservation.nombrePersonnes }}</td>
+            </tr>
+            <tr>
+                <th>Nombre d'enfants</th>
+                <td>{{ reservation.nombreEnfants }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{{ include('reservation/_delete_form.html.twig') }}
+
+{% endblock %}

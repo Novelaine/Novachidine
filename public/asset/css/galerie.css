@@ -1,0 +1,75 @@
+.galeriephoto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 35px;
+    
+
+}
+.galeriephoto img {
+    width: 400px;
+    padding: 25px 0 20px 0;
+    margin-top: 25px;
+
+}
+
+#description{
+    font-size: 20px;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+#voirimg{
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 479px;
+    width: 50%;
+}
+
+.image2{
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 25px 0;
+    position: absolute;
+    text-align: center;
+    font-size: 21px;
+    visibility: hidden;
+    margin-top: 50px;
+}
+
+.image2 .imagejs{
+    width: 60%;
+    padding-bottom: 73px;
+}
+
+.image2 .fleche{
+    width: 4%;
+    margin-bottom: 22%;
+}
+.image2 .croix{
+    width: 4%;
+    margin-bottom: 50%;
+}
+
+@media screen and (max-width: 1120px){
+
+    .image2{
+        width: 95%;
+    }
+
+    .image2 .imagejs{
+        width: 77%;
+    }
+
+    .image2 .fleche {
+        margin-bottom: 32%;
+    }
+
+    .image2 .croix {
+        width: 4%;
+        margin-bottom: 59%;
+    }
+
+}

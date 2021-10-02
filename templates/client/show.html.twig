@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+{% block body %}
+    <h1>Voir un Client</h1>
+    <div class="trait"></div>
+
+        <a href="{{ path('client_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+
+    <a href="{{ path('client_edit', {'id': client.id}) }}"><button class="btnModif">Modifier</button></a>
+
+   
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ client.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ client.email }}</td>
+            </tr>
+            <tr>
+                <th>Rôles</th>
+                <td>{{ client.roles ? client.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Mot de passe</th>
+                <td>{{ client.password }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ client.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ client.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ client.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Code postal</th>
+                <td>{{ client.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ client.ville }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ client.pays }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone</th>
+                <td>{{ client.telephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+ {{ include('client/_delete_form.html.twig') }}
+
+{% endblock %}

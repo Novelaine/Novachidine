@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Contact{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('asset/css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Créer un nouveau Contact</h1>
+<div class"trait"></div>
+
+    <a href="{{ path('contact_index') }}">Retour à la liste</a>
+
+
+    {{ include('contact/_form.html.twig') }}
+   
+
+
+{% endblock %}

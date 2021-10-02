@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Modifier la Galerie{% endblock %}
+
+{% block body %}
+    <h1>Modifier la Galerie</h1>
+    <div class="trait"></div>
+
+    <a href="{{ path('galerie_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+    
+
+    {{ include('galerie/_form.html.twig', {'button_label': 'Modifier'}) }}
+    {{ include('galerie/_delete_form.html.twig') }}
+
+{% endblock %}

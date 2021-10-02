@@ -1,0 +1,68 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('asset/css/resa_client.css')}}">
+{% endblock %}
+{% block body %}
+<h1>Réservation</h1>
+<div class="trait"></div>
+<h1 id="bonjour">Bonjour , {{ app.user.nom}} {{ app.user.prenom}}</h1>
+<p id="pararesa"> Veuillez compléter les champs du formulaire ci-dessous, afin de rendre effective votre réservation.</p>
+
+<div class="fondResa">
+
+{{ form_start(form) }}
+<section class="resa">
+    <div>
+    {{ form_row(form.date_arrivee)}}
+    {{ form_row(form.nombre_personnes)}}
+    {{ form_row(form.nombre_animaux)}}
+
+    </div>
+    <div>
+    {{ form_row(form.date_depart)}}
+    {{ form_row(form.chambre)}}
+    {{ form_row(form.type_animaux)}}
+
+    </div>
+    </section>
+<button class="btn">{{ button_label|default('Réserver') }}</button>
+
+</div>
+
+
+
+
+{{ form_end(form) }}
+
+
+{% for chambre in chambres %}
+
+
+                <section class="cardResa">
+    <h3>Chambre  {{ chambre.typeChambre }}</h3>
+
+    <div class="sousCard">
+    <img src="{{dossier_images ~ chambre.photo}}" alt="">
+    <div class="sousDetail">
+    <p> Cette chambre accepte les animaux : <strong class="yesno">{{ chambre.accepteAnimaux }}</strong></p>
+    <p>{{ chambre.detail }}</p>
+    <p> <i class="fas fa-wifi"></i> Wifi gratuit<br>
+        <i class="fas fa-luggage-cart"></i> Conciergerie </p>
+    </div>
+     {% if reservationsfaites is defined %}
+             {% if reservation not in reservationsfaites %}
+                <i class="fa fa-cart-arrow-down"></i> Disponible
+             {% else %}
+                <i class="fa fa-times"></i> Indisponible 
+            {% endif %}
+    {% endif %}
+
+    <p id="tarif"><strong>Tarif : {{ chambre.prix }} €</strong></p>
+</div>
+
+
+</section>
+{% endfor %}
+
+{% endblock %}

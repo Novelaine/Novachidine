@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Client {% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau Client</h1>
+    <div class"trait"></div>
+    <a href="{{ path('client_index') }}">Retour à la liste</a>
+
+
+    {{ include('client/_form.html.twig') }}
+
+{% endblock %}

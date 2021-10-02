@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie{% endblock %}
+
+{% block stylesheets %}
+{{parent()}}
+<link rel="stylesheet" href="{{ asset('asset/css/galerie.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {#{{ encore_entry_script_tags('app') }}#}
+    {{ parent() }}
+    <script src="{{ asset('asset/js/galerie.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+<h1>Galerie</h1>
+<div class="trait"></div>
+    <div class="galeriephoto">
+
+
+        <div class="image2">
+            <img src="{{ asset('asset/imgjsGal/precedent.png')}}" class="fleche" alt="precedent">
+            <img class="imagejs" src="{{ asset('asset/imgjsGal/1.jpg') }}" alt="image galerie">
+               <img src="{{ asset('asset/imgjsGal/suivant.png')}}" class="fleche" alt="suivant">
+            <img src="{{ asset('asset/imgjsGal/close1.png')}}" class="croix" alt="croix de fermeture">
+          </div>
+        {% for galerie in galeries %}
+
+
+            <div>
+                <img src="{{ dossier_images ~ galerie.image }}" alt="">
+               <p id="description">{{ galerie.description }}</p> 
+          </div>
+        {% else %}
+          
+                <p colspan="5">Pas d'images disponible.</p>
+            
+        {% endfor %}
+    </div>
+{% endblock %}

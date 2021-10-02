@@ -1,0 +1,43 @@
+CLIENT
+
+id (PK)
+Nom
+Prenom
+Email
+Adresse
+Code_postal
+Ville
+Pays
+Telephone
+mot_de_passe
+ 
+
+RESERVATION
+
+id (PK)
+Date_arrivée
+Date_depart
+Nombre_animaux
+Type_animaux
+Nombre_personnes
+Nombre_enfants
+Details
+Client_id (FK)
+Chambre_id (FK)
+
+CHAMBRE
+
+id (PK)
+type_chambre 
+Nombre_chambre
+Petit_dejeuner
+
+
+
+CONTACT
+
+id_contact (PK)
+Nom
+Prenom
+Email
+Message

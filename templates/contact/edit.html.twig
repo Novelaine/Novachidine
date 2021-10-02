@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un Contact{% endblock %}
+
+{% block body %}
+    <h1>Modifier un contact</h1>
+    <div class="trait"></div>
+
+    <a href="{{ path('contact_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+    
+
+    {{ include('contact/_form.html.twig', {'button_label': 'Modifier'}) }}
+    {{ include('contact/_delete_form.html.twig') }}
+
+    
+
+{% endblock %}

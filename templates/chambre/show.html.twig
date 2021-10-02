@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chambre{% endblock %}
+
+{% block body %}
+    <h1>Voir la chambre</h1>
+    <div class="trait"></div>
+
+    <a href="{{ path('chambre_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+    <a href="{{ path('chambre_edit', {'id': chambre.id}) }}"><button class="btnModif">Modifier</button></a>
+
+<table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Photo</th>
+
+            </tr>
+            <tr>
+                <td>{{ chambre.id }}</td>
+                <td><img src="{{ dossier_images ~ chambre.photo }}"></td>
+            </tr>
+            <tr>
+                <th>Type de chambre</th>
+                <td>{{ chambre.typeChambre }}</td>
+            </tr>
+
+            <tr>
+                <th>N° de chambre</th>
+                <td>{{ chambre.numChambre }}</td>
+            </tr>
+            <tr>
+                <th>Disponibilité</th>
+                <td>{{ chambre.disponibilite }}</td>
+            </tr>
+            <tr>
+                <th>Accepte les animaux</th>
+                <td>{{ chambre.accepteAnimaux }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ chambre.prix }}</td>
+            </tr>
+            <tr>
+                <th>Détails</th>
+                <td>{{ chambre.detail }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+{{ include('chambre/_delete_form.html.twig') }}
+
+
+
+{% endblock %}

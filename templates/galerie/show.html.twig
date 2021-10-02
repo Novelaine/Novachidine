@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie{% endblock %}
+{% block stylesheets %}
+{{parent()}}
+<link rel="stylesheet" href="{{ asset('asset/css/galerie.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Voir la photo</h1>
+    <div class="trait"></div>
+    <a href="{{ path('galerie_index') }}"><i class="fas fa-undo-alt" id="return"></i></a>
+
+
+    <a href="{{ path('galerie_edit', {'id': galerie.id}) }}"><button class="btnModif">Modifier</button></a>
+
+    
+    <div id="voirimg">
+                    
+            <div class="galeriephoto">
+                <img src="{{ dossier_images ~ galerie.image }}">
+            </div>
+
+        <table class="table">
+            <tbody>
+            
+                <tr>
+                    <th>Id</th>
+                    <td>{{ galerie.id }}</td>
+                </tr>
+                
+                <tr>
+                    <th>Description</th>
+                    <td>{{ galerie.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{{ include('galerie/_delete_form.html.twig') }}
+
+{% endblock %}

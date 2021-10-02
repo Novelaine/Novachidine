@@ -1,0 +1,47 @@
+    <header>
+
+                <a href="{{ path('accueil')}}"><img src="{{ asset('asset/img/logo1.png')}}" alt="novachidine">
+                <h1>LE NOVACHIDINE</h1>
+                <h3 id="slogan">Venez de deux à quatre pattes</h3>
+                </a>
+                <img src="{{ asset('asset/img/burger.png')}}" class="burger" alt="">
+                <img src="{{ asset('asset/img/fermer.png')}}" class="fermer" alt="">
+            <nav>
+              
+                <a href="{{ path('accueil') }}">Accueil</a>
+                {% if app.user %}
+                <a href="{{ path('reservation_new') }}">Réservation</a>
+                {% endif %}
+                <a href="{{ path('galerie_client') }}">Galerie</a>
+                <a href="{{ path('contact_new') }}">Contact</a>
+
+                  {% if is_granted("ROLE_ADMIN") %}
+                <ul>
+                    <li class="deroulant"><a href="#">Administrateur</a>
+                        <ul class="sous">
+                            <li><a href="{{ path('reservation_index') }}" class="admin" >Réservation Admin</a></li>
+                            <li><a href="{{ path('galerie_index') }}" class="admin" >Galerie Admin</a></li>
+                            <li><a href="{{ path('contact_index') }}" class="admin" >Contact Admin</a></li>
+                            <li><a href="{{ path('client_index') }}" class="admin" >Client Admin</a></li>
+                            <li><a href="{{ path('chambre_index') }}" class="admin" >Chambre Admin</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+                {% endif %}
+
+                {% if app.user %}
+                <a href="{{ path('app_logout') }}">Deconnexion</a>
+                {% else %}
+                <a href="{{ path('app_login') }}">Connexion</a>
+                <a href="{{ path('app_register') }}">Inscription</a>
+                {% endif %}
+                
+
+                
+                
+            </nav>
+                <div class="clear"></div>
+            
+    </header>
+
+
