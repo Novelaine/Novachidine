@@ -4,7 +4,7 @@ var menu = document.getElementsByTagName('img')[1];
 console.log(menu);
 var nav = document.getElementsByTagName('nav')[0];
 console.log(nav);
-
+ 
 menu.addEventListener('click', voir);
 
 function voir() {
